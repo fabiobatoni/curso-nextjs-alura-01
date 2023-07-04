@@ -1,5 +1,6 @@
-import Head from 'next/head';
-import Link from '../src/components/Link';
+import FAQScreen from '../src/screens/FAQScreen';
+
+export default FAQScreen;
 
 //export async function getServerSideProps() {
 // getServerSideProps => Rodando a cada acesso que você recebe
@@ -24,24 +25,3 @@ export async function getStaticProps() {
   }
 }
 
-export default function FAQPage({ faq }) {
-
-  return (
-    <div>
-      <Head>
-        <title>FAQ - Alura Cases Campanha</title>
-      </Head>
-      <h1>Alura Cases - FAQ</h1>
-      <Link href="/">
-        ir para pagina do HOME
-      </Link>
-      <ul>
-        {faq.map(({answer, question}) => (
-          <li key={question}>
-            {question}
-          </li>
-        ))}
-      </ul>
-    </div>
-  )
-}
